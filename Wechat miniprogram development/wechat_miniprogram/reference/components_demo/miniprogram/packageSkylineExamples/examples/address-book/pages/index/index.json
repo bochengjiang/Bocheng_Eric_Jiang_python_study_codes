@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "navigation-bar": "../../components/navigation-bar",
+    "address-book": "../../components/address-book"
+  },
+  "disableScroll": true,
+  "componentFramework": "glass-easel",
+  "renderer": "skyline",
+  "navigationStyle": "custom"
+}

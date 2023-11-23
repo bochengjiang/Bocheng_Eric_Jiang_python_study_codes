@@ -1,0 +1,68 @@
+<wxs module="util" src="../util.wxs" />
+<view class="container">
+  <view class="form-group">
+    <view class="form-cell">
+      <view class="form-cell_title">任务名称</view>
+      <input class="form-cell_input" placeholder="请输入任务名称(100字以内)" placeholder-class="form-cell_title-placeholder"
+        bindinput="onTitleInput" value="{{title}}" maxlength="100"/>
+    </view>
+    <view id="tapTest" data-hi="Weixin" bindtap="tapName"> Click me! </view>
+    <view class="form-cell">
+      <view class="form-cell_title">任务地点</view>
+      <input class="form-cell_input" placeholder="请输入任务地点(100字以内)" placeholder-class="form-cell_title-placeholder"
+        bindinput="onPlaceInput" value="{{place}}" maxlength="100"/>
+    </view>
+    <view class="form-cell">
+      <view class="form-cell_title">详细描述</view>
+      <input class="form-cell_input" placeholder="请输入详细描述（100字以内）" placeholder-class="form-cell_title-placeholder"
+        bindinput="onDescInput" value="{{desc}}" maxlength="100"/>
+    </view>
+  </view>
+  <view class="form-group">
+    <view class="form-cell inline">
+      <view>添加附件</view>
+      <view class="upload-text" bindtap="addFile">
+        {{(files.length === 0 ? "点击添加附件" : util.filterStr(fileName, 15))}}
+      </view>
+      <image class="upload" bindtap="addFile" src="../../images/add/next.png"></image>
+    </view>
+  </view>
+  <view class="form-group">
+
+    <view class="form-cell inline">
+      <view>开始时间</view>
+      <picker mode="time" class="selector" bindchange="bindStartTimeChange" start="00:00" end="23:59" >
+      {{start_time}}
+      </picker>
+    </view>
+    <view class="form-cell inline">
+      <view>结束时间</view>
+      <picker mode="time" class="selector" bindchange="bindEndTimeChange" start="00:00" end="23:59" >
+      {{end_time}}
+      </picker>
+    </view>
+
+    <view class="form-cell inline">
+      <view>任务类别</view>
+      <picker class="text" bindchange="onChoosechore" range="{{choreOptions}}" >
+        {{choreOptions[kind_of_chore]}}
+      </picker>
+      <picker class="selector" bindchange="onChoosechore" range="{{choreOptions}}">
+        <image class="arrow" src="../../images/add/next.png"></image>
+      </picker>
+    </view>
+    <view class="form-cell inline">
+      <view>任务状态</view>
+      <picker class="text" bindchange="bindStatusChaneg" range="{{statusOptions}}" >
+        {{statusOptions[status]}}
+      </picker>
+      <picker class="selector" bindchange="bindStatusChaneg" range="{{statusOptions}}">
+        <image class="arrow" src="../../images/add/next.png"></image>
+      </picker>
+    </view>
+  </view>
+  <view class="footer">
+    <view class="reset" bindtap="resetTodo">重置</view>
+    <view class="save" bindtap="saveTodo">保存</view>
+  </view>
+</view>

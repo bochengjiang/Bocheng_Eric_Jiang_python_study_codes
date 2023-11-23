@@ -1,3 +1,6 @@
-# descirption for folder
+# description
 
-this folder is devoted to classworks involving using the repository turtle to achieve different goals
+this section is devoted to codes that help me pracitce and get familiar with different the repository called turtle
+
+## what is turtle
+Random is a repository that helps drawing basic shapes

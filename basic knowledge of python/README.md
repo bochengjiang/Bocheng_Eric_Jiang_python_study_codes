@@ -1,9 +1,3 @@
-# Description of classwork part
+# Description of basic knowledge of python
 
-## URLs
-
-- Python: [Download](https://www.python.org/downloads/); [Documentation](https://docs.python.org/3/)
-- IDE(Visual Studio Code): [Download](https://code.visualstudio.com/Download)
-- GitHub Desktop: [Download](https://desktop.github.com/)
-
-this section is devoted to projects finished in class
+This sections includes all the codes that I have coded regarding basic knowledge of python (including but not limited to loops, data types, functions etc.)
